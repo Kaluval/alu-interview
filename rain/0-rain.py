@@ -5,9 +5,8 @@
 
 def rain(walls):
     """Function that calculates the rainwater retained."""
-
     if len(walls) == 0:
-        return 0    
+        return 0
     bar_left, bar_right = 0, len(walls) - 1
     bar_left_max, bar_right_max = walls[bar_left], walls[bar_right]
     amount_water = 0
@@ -22,4 +21,3 @@ def rain(walls):
             bar_right_max = max(bar_right_max, walls[bar_right])
             amount_water += bar_right_max - walls[bar_right]
     return amount_water
-    
